@@ -1,5 +1,7 @@
 /// <reference types="cypress" />
 
+// CI test
+
 describe("The Coda Collection Film Exploration", () => {
   let filmData;
   beforeEach(() => {
