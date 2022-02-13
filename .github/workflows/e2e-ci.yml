@@ -1,0 +1,29 @@
+name: Coda Collection E2E-s CI Demo
+on: [pull_request]
+jobs:
+   povio-e2e-tests:
+      runs-on: ubuntu-latest
+      steps:
+         - name: Checkout
+           uses: actions/checkout@v2
+         - name: Install node
+           uses: actions/setup-node@v2
+           with:
+              node:version: '16'
+
+         - name: Install dependencies
+           run: npm install
+         - name: Cypress run
+           uses: cypress-io/github-action@v2
+           with:
+              browser: chrome
+              headless: true
+
+         - name: Upload Report as an artifact
+           if: always()
+           uses: actions/upload-artifact@v2
+           with:
+              name: povio-e2e-report
+              path: |
+                 cypress/reports
+                 cypress/screenshots
