@@ -1,0 +1,17 @@
+{
+    "baseUrl": "https://codacollection.co",
+    "video": false,
+    "viewportHeight": 1080,
+    "viewportWidth": 1920,
+    "defaultCommandTimeout": 10000,
+    "chromeWebSecurity": false,
+    "watchForFileChanges": false,
+    "trashAssetsBeforeRuns": true,
+    "reporter": "cypress-mochawesome-reporter",
+    "reporterOptions": {
+        "reportDir": "cypress/reports",
+        "charts": true,
+        "reportPageTitle": "Coda Collection E2E Reports",
+        "embeddedScreenshots": true
+    }
+}
