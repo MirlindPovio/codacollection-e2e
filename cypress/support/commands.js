@@ -25,5 +25,5 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 Cypress.Commands.add('acceptCookies',()=>{
-    cy.contains("Accept").click();
+    cy.get('[aria-label="acceptAllCookies"]').click();
 })
