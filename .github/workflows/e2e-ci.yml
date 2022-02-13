@@ -1,7 +1,7 @@
 name: Coda Collection E2E-s CI Demo
 on: [pull_request]
 jobs:
-   povio-e2e-tests:
+   coda-collection-e2e:
       runs-on: ubuntu-latest
       steps:
          - name: Checkout
@@ -23,7 +23,7 @@ jobs:
            if: always()
            uses: actions/upload-artifact@v2
            with:
-              name: povio-e2e-report
+              name: coda-collection-e2e
               path: |
                  cypress/reports
                  cypress/screenshots
