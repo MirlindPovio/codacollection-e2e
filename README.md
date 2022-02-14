@@ -13,7 +13,7 @@ Cypress is a javascript e2e automation testing tool chosen for the project.
 
 
 #### cypress-mochawesome-reporter
-Mochawesome reporter is an html reporter for Cypress which includes results details with screenshots attached.
+Mochawesome reporter is an html reporter for Cypress which includes results with details and screenshots attached.
 
 #### Open Cypress Test Runner
 
@@ -62,7 +62,7 @@ https://github.com/MirlindPovio/codacollection-e2e/actions
 #### Sample with the passed tests:
 
 ```
-
+https://github.com/MirlindPovio/codacollection-e2e/actions/runs/1838441884
 ```
 
 #### Sample with the failed tests:
