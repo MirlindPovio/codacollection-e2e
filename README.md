@@ -15,6 +15,12 @@ Cypress is a javascript e2e automation testing tool chosen for the project.
 #### cypress-mochawesome-reporter
 Mochawesome reporter is an html reporter for Cypress which includes results with details and screenshots attached.
 
+#### Install Depedencies
+
+```
+npm install
+```
+
 #### Open Cypress Test Runner
 
 This command opens the cypress test runner where you can run the actual test suite on different browsers.
