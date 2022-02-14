@@ -19,10 +19,10 @@ describe("The Coda Collection Searching Section", () => {
         cy.get('[data-testid="searchPreview-input"]')
           .click()
           .type(searchData.bandName);
+        cy.wait(1000);
         cy.get('[data-testid="searchPreview-artists"]')
           .find("a")
-          .should("have.text", "Radiohead");
-
+          .should("have.text", searchData.bandName);
         cy.get('[data-testid="searchPreview-seeAll"]')
           .scrollIntoView()
           .should("be.visible")
@@ -71,13 +71,6 @@ describe("The Coda Collection Searching Section", () => {
     cy.get("div").find("h2").should("be.visible").and("have.text", "Radiohead");
 
     // Check Collections Section Results
-    cy.get("button").contains("Collections").click();
-    for (let i = 0; i < searchData.collections.length; i++) {
-      cy.get('[data-testid="collectionTitle"]')
-        .find("div")
-        .should("be.visible")
-        .and("contains.text", searchData.collections[i]);
-    }
     cy.get("button").contains("Collections").click();
     for (let i = 0; i < searchData.collections.length; i++) {
       cy.get('[data-testid="collectionTitle"]')
