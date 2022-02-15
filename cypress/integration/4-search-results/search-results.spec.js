@@ -82,14 +82,14 @@ describe("The Coda Collection Searching Section", () => {
     // Check Video Section Results
     cy.get("button").contains("Videos").click();
     for (let i = 0; i < searchData.videos.length; i++) {
-      cy.get('[data-testid="contentCellTitle"]')
+      cy.get('[data-testid="BaseCell-Title"]')
         .should("be.visible")
         .and("contains.text", searchData.videos[i]);
     }
 
     cy.get("button").contains("Stories").click();
     for (let i = 0; i < searchData.stories.length; i++) {
-      cy.get('[data-testid="contentCellTitle"]')
+      cy.get('[data-testid="BaseCell-Title"]')
         .should("be.visible")
         .and("contains.text", searchData.stories[i]);
     }
