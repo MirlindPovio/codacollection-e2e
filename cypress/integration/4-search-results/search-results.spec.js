@@ -19,7 +19,7 @@ describe("The Coda Collection Searching Section", () => {
         cy.get('[data-testid="searchPreview-input"]')
           .click()
           .type(searchData.bandName);
-        cy.wait(1000);
+        cy.wait(225);
         cy.get('[data-testid="searchPreview-artists"]')
           .find("a")
           .should("have.text", searchData.bandName);
